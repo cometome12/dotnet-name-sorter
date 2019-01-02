@@ -2,19 +2,23 @@ using System;
 public class File
 {
     private string[] entries;
-    public string rawContent { get; set; }
-    public File(string path)
+    private string content;
+
+    public File(string[] entries = null, string content = null)
+    {
+       this.entries = entries;
+       this.content = content;
+    }
+
+    public void read(string path)
     {
         try {
             this.entries = System.IO.File.ReadAllLines(path);
         } catch(Exception e) {
             Console.WriteLine("Something went wrong when reading the file. Message: "+ e.Message);
+            Environment.Exit(1);
         }
-    }
-
-    public void emptyEntries()
-    {
-        Array.Clear(this.entries, 0, this.entries.Length);
+        this.content = String.Join(System.Environment.NewLine, this.entries);
     }
 
     public void mapNameToPersonList(PersonList list)
@@ -28,7 +32,13 @@ public class File
         }
     }
 
-    public void mapPersonListToFile(PersonList list) => rawContent = String.Join(System.Environment.NewLine, list.people);
-
-    public void outputFileByRawContent(string path) => System.IO.File.WriteAllText(path, this.rawContent);
+    public void writeContent(string path) 
+    {
+        try {
+            System.IO.File.WriteAllText(path, this.content);
+        } catch(Exception e) {
+            Console.WriteLine("Something went wrong when writing the file. Message: "+ e.Message);
+            Environment.Exit(1);
+        }
+    }
 }

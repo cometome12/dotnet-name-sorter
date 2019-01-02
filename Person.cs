@@ -11,6 +11,6 @@ public class Person
         this.lastName = lastName;
         this.givenName = givenName;
         //To String?
-        this.fullName= String.Join(" ", this.givenName) + this.lastName;
+        this.fullName= String.Join(" ", this.givenName) + " " + this.lastName;
     }
 }

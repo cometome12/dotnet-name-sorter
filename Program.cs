@@ -6,17 +6,19 @@ namespace dotnet_name_sorter
     {
         static void Main(string[] args)
         {
-            // exception log??
             Validator validator = new Validator();
             validator.validate(args);
-            File nameFile = new File(args[0]);
+
+            File unsortedNameFile = new File();
+            unsortedNameFile.read(args[0]);
+
             PersonList personList = new PersonList();
-            nameFile.mapNameToPersonList(personList);
+            unsortedNameFile.mapNameToPersonList(personList);
             personList.sortByLastNameAndGivenNames();
-            // write together??
-            nameFile.emptyEntries();
-            nameFile.mapPersonListToFile(personList);
-            nameFile.outputFileByRawContent(AppDomain.CurrentDomain.BaseDirectory);
+            personList.displayAllNames();
+
+            File sortedNameFile = new File(personList.getFullNameArray(), personList.getFullNameStr());
+            sortedNameFile.writeContent(AppDomain.CurrentDomain.BaseDirectory + "/sorted-names-list.txt");
         }
     }
 }
