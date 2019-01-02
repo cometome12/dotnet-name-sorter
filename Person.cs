@@ -6,11 +6,10 @@ public class Person
     public string[] givenName { get; set; }
     public string fullName { get; set; }
 
-    public Person(string lastName, string[] givenName)
+    public Person(string lastName = null, string[] givenName = null)
     {
         this.lastName = lastName;
         this.givenName = givenName;
-        //To String?
         this.fullName= String.Join(" ", this.givenName) + " " + this.lastName;
     }
 }

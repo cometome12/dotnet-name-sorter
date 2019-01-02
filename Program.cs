@@ -18,7 +18,7 @@ namespace dotnet_name_sorter
             personList.displayAllNames();
 
             File sortedNameFile = new File(personList.getFullNameArray(), personList.getFullNameStr());
-            sortedNameFile.writeContent(AppDomain.CurrentDomain.BaseDirectory + "/sorted-names-list.txt");
+            sortedNameFile.writeContent("sorted-names-list.txt");
         }
     }
 }

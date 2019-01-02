@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 public class File
 {
     private string[] entries;
@@ -26,8 +27,7 @@ public class File
         foreach (string entry in this.entries)
         {
             var entryArray = entry.Split(' ');
-            //TODO here
-            Person person = new Person(entryArray[1], entryArray);
+            Person person = new Person(entryArray.Last(), entryArray.Take(entryArray.Length - 1).ToArray());
             list.add(person);
         }
     }

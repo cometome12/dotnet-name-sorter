@@ -21,15 +21,23 @@ public class PersonList
         }
     }
 
-    public List<Person> sortByLastNameAndGivenNames()
+    public void sortByLastNameAndGivenNames()
     {
-        //TODO write sort
-        return people;
+        this.people = this.people
+        .OrderBy(person => person.lastName)
+        .ThenBy(person=>person.givenName[0])
+        .ThenBy(person=>person.givenName.Length >= 2 ? person.givenName[1] : string.Empty)
+        .ThenBy(person=>person.givenName.Length >= 3 ? person.givenName[2] : string.Empty)
+        .ToList();
+
+
+        
+
     }
 
     public string[] getFullNameArray()
     {
-        return this.people.Select( x => x.fullName).ToArray();
+        return this.people.Select( person => person.fullName).ToArray();
     }
 
     public string getFullNameStr()
@@ -39,9 +47,9 @@ public class PersonList
 
     public void displayAllNames()
     {
-        foreach (string name in getFullNameArray())
+        foreach (Person person in this.people)
         {
-            Console.WriteLine(name);
+            Console.WriteLine(person.fullName);
         }
     }
 }
