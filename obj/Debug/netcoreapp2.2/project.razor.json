@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/Users/loispark/Desktop/projects/dotnet-name-sorter/dotnet-name-sorter.csproj",
+  "TargetFramework": "netcoreapp2.2",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

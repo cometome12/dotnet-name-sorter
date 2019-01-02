@@ -1,0 +1,11 @@
+/Users/loispark/Desktop/projects/dotnet-name-sorter/bin/Debug/netcoreapp2.2/dotnet-name-sorter.deps.json
+/Users/loispark/Desktop/projects/dotnet-name-sorter/bin/Debug/netcoreapp2.2/dotnet-name-sorter.runtimeconfig.json
+/Users/loispark/Desktop/projects/dotnet-name-sorter/bin/Debug/netcoreapp2.2/dotnet-name-sorter.runtimeconfig.dev.json
+/Users/loispark/Desktop/projects/dotnet-name-sorter/bin/Debug/netcoreapp2.2/dotnet-name-sorter.dll
+/Users/loispark/Desktop/projects/dotnet-name-sorter/bin/Debug/netcoreapp2.2/dotnet-name-sorter.pdb
+/Users/loispark/Desktop/projects/dotnet-name-sorter/obj/Debug/netcoreapp2.2/dotnet-name-sorter.csprojAssemblyReference.cache
+/Users/loispark/Desktop/projects/dotnet-name-sorter/obj/Debug/netcoreapp2.2/dotnet-name-sorter.csproj.CoreCompileInputs.cache
+/Users/loispark/Desktop/projects/dotnet-name-sorter/obj/Debug/netcoreapp2.2/dotnet-name-sorter.AssemblyInfoInputs.cache
+/Users/loispark/Desktop/projects/dotnet-name-sorter/obj/Debug/netcoreapp2.2/dotnet-name-sorter.AssemblyInfo.cs
+/Users/loispark/Desktop/projects/dotnet-name-sorter/obj/Debug/netcoreapp2.2/dotnet-name-sorter.dll
+/Users/loispark/Desktop/projects/dotnet-name-sorter/obj/Debug/netcoreapp2.2/dotnet-name-sorter.pdb
