@@ -12,7 +12,7 @@ namespace NameSorter.Tests
 
     	public UnitTest1()
     	{
-    		this.validator = new Validator();
+            this.validator = new Validator();
             this.file = new File();
             this.people = new PersonList();
     	}
@@ -25,7 +25,7 @@ namespace NameSorter.Tests
         }
 
         [Fact]
-        public void TestAgainst1000Names()
+        public void TestCorrectness()
         {
             file.read("../../../../test-names-list.txt");
             file.mapNameToPersonList(people);
@@ -35,7 +35,6 @@ namespace NameSorter.Tests
             "Janet Wow Parsons", "John Parsons", "John Pooobo", "Wood Pooobo",
             "Colin Wise"};
             Assert.Equal(expected, people.getFullNameArray());
-           
         }
     }
 }

@@ -29,10 +29,6 @@ public class PersonList
         .ThenBy(person=>person.givenName.Length >= 2 ? person.givenName[1] : string.Empty)
         .ThenBy(person=>person.givenName.Length >= 3 ? person.givenName[2] : string.Empty)
         .ToList();
-
-
-        
-
     }
 
     public string[] getFullNameArray()
